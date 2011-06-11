@@ -1,0 +1,10 @@
+build and install
+-----------------
+
+./ndk-build -B
+./ant debug
+./adb install -r bin/HelloAndroid-debug.apk
+
+see log
+-------
+adb log cat -s NATIVE
