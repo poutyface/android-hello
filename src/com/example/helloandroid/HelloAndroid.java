@@ -1,0 +1,25 @@
+package com.example.helloandroid;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class HelloAndroid extends Activity
+{
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        // call native program
+        welcome();
+    }
+
+    // Add for native program
+    public native void welcome();
+
+    static{
+        System.loadLibrary("welcome");
+    }
+}
